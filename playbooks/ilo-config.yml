@@ -1,1 +1,6 @@
+---
+- hosts: "{{ host }}"
 
+  roles: 
+    - role: hpIloConfig
+    - role: isoInstallation
