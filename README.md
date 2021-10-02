@@ -1,2 +1,2 @@
 # iLOrest
-auto HP iLO config
+Automate initial HP ilo settings
