@@ -1,0 +1,6 @@
+---
+- name: set_fqdn
+  shell: 'ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest set Oem/Hpe/ServerFQDN={{ FQDN }} --selector ComputerSystem. && ilorest commit'
+  connection: local
+  become: no
+  delegate_to: localhost
