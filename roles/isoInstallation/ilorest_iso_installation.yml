@@ -1,0 +1,8 @@
+
+---
+
+- name: change_pass_user
+  shell: "ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest set Image={{ iso_url }} Oem/Hpe/BootOnNextServerReset=True  --selector VirtualMedia --commit && ilorest reboot --logout"
+  connection: local
+  become: no
+  delegate_to: localhost
