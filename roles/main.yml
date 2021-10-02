@@ -1,1 +1,9 @@
+---
 
+- include_tasks: ilorest_set_license.yml
+- include_tasks: ilorest_set_server_name.yml
+- include_tasks: ilorest_set_fqdn.yml
+- include_tasks: ilorest_set_dns_server.yml
+- include_tasks: ilorest_set_ntp_server.yml
+- include_tasks: ilorest_set_log_server.yml
+- include_tasks: ilorest_change_password.yml
