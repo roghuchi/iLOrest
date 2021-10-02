@@ -1,0 +1,6 @@
+---
+- name: set_dns_server
+  shell: "ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest set Oem/Hpe/IPv4/DNSServers=[{{ dns_servers }}] --selector EthernetInterface --commit && ilorest logout"
+  connection: local
+  become: no
+  delegate_to: localhost
