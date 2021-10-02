@@ -1,0 +1,7 @@
+---
+
+- name: serverinfo
+  shell: "ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest serverinfo --logout"
+  connection: local
+  become: no
+  delegate_to: localhost
