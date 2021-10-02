@@ -1,5 +1,5 @@
 # iLOrest
-Automate initial HP ilo settings (ansible)
+Automate initial HP ilo settings (ansible playbooks)
 
 
 install ilorest-3.1.1-11.x86_64.rpm
