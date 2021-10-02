@@ -1,0 +1,6 @@
+---
+- name: set_server_name
+  shell: 'ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest set HostName={{ servername }} --selector ComputerSystem. && ilorest commit && ilorest logout'
+  connection: local
+  become: no
+  delegate_to: localhost
