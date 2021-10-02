@@ -1,0 +1,7 @@
+---
+
+- name: create_user
+  shell: "ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest iloaccounts add  {{ username }} {{ accountname }} {{ password }} --role ReadOnly && ilorest save --logout"
+  connection: local
+  become: no
+  delegate_to: localhost
