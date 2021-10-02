@@ -1,0 +1,7 @@
+---
+- name: set_license
+  shell: "ilorest login {{ host_ip }} -u {{ ilo_username }} -p {{ ilo_password }} && ilorest ilolicense {{ license }} && ilorest logout"
+  register: ilo
+  connection: local
+  become: no
+  delegate_to: localhost  
